@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verify Portal</title>
+  
+  <!-- Font Modern (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          boxShadow: {
+            'glass': '0 20px 40px -15px rgba(0, 0, 0, 0.05)',
+            'glow': '0 0 25px -5px rgba(37, 99, 235, 0.2)',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col justify-between selection:bg-blue-600 selection:text-white relative overflow-x-hidden">
+
+  <!-- Light Background Ambient Glow -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-blue-100 rounded-full blur-[120px] opacity-70"></div>
+    <div class="absolute top-1/2 -right-40 w-96 h-96 bg-indigo-100 rounded-full blur-[120px] opacity-60"></div>
+    <div class="absolute -bottom-40 left-1/3 w-96 h-96 bg-slate-200 rounded-full blur-[120px] opacity-50"></div>
+  </div>
+
+  <!-- Header Section -->
+  <header class="w-full bg-white/80 backdrop-blur-md border-b border-slate-200/80 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="p-2 bg-blue-600 rounded-xl text-white shadow-md shadow-blue-500/20">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>
+        </div>
+        <div>
+          <span class="text-base font-bold text-slate-900 tracking-tight block">Authenticity Portal</span>
+          <span class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold block sm:hidden">Official Verifier</span>
+        </div>
+      </div>
+      <div class="hidden sm:flex items-center space-x-2 text-xs font-semibold text-slate-500 bg-slate-100 px-3 py-1.5 rounded-full border border-slate-200">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span>Online</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Responsive Container -->
+  <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 my-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      
+      <!-- Hero / Info Banner -->
+      <div class="lg:col-span-5 space-y-4 text-center lg:text-left">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200/60 text-blue-700 text-xs font-medium">
+          <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <span>PT. Laksana Digital Industri</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+          Verifikasi Produk & Status Garansi
+        </h1>
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
+          Masukkan identitas produk anda untuk memeriksa keaslian dan kepemilikan secara langsung.
+        </p>
+
+        <!-- Desktop Feature Cards -->
+        <div class="hidden lg:grid grid-cols-2 gap-4 pt-4">
+          <div class="p-4 bg-white rounded-2xl border border-slate-200/80 shadow-sm">
+            <div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center mb-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            </div>
+            <h4 class="text-xs font-bold text-slate-800">100% Valid Data</h4>
+            <p class="text-[11px] text-slate-500 mt-0.5">Terhubung langsung ke database kami.</p>
+          </div>
+          <div class="p-4 bg-white rounded-2xl border border-slate-200/80 shadow-sm">
+            <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center mb-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+            </div>
+            <h4 class="text-xs font-bold text-slate-800">Aman & Terproteksi</h4>
+            <p class="text-[11px] text-slate-500 mt-0.5">Enkripsi data hasil pemeriksaan.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Verification Card -->
+      <div class="lg:col-span-7 w-full max-w-lg mx-auto lg:max-w-none">
+        <div class="bg-white/90 backdrop-blur-xl border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-glass relative">
+          
+          <div class="mb-6">
+            <h2 class="text-xl font-bold text-slate-900">Pemeriksaan Produk</h2>
+            <p class="text-xs text-slate-500 mt-1">Isi kolom di bawah dengan identitas unik pada produk anda yang tertera pada Produk / Kemasan.</p>
+          </div>
+
+          <!-- Input Form Section -->
+          <form id="verifyForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+            <div>
+              <label for="snInput" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">
+                IDENTITAS
+              </label>
+              <div class="relative">
+                <input type="text" id="snInput" placeholder=" SN/ID/IMEI/MAC Address " 
+                       class="w-full px-4 py-4 bg-slate-50 border border-slate-300 rounded-2xl uppercase tracking-widest font-mono text-center font-bold text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-600 focus:bg-white focus:ring-4 focus:ring-blue-500/10 transition-all duration-300 text-lg sm:text-xl shadow-inner">
+              </div>
+            </div>
+
+            <button type="submit" 
+                    class="w-full py-4 px-6 bg-blue-600 hover:bg-blue-700 active:scale-[0.99] text-white font-semibold rounded-2xl transition-all duration-200 shadow-lg shadow-blue-600/25 flex items-center justify-center space-x-2 text-sm sm:text-base cursor-pointer">
+              <span>Verifikasi Sekarang</span>
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </button>
+          </form>
+
+          <!-- Loading State -->
+          <div id="loading" class="hidden mt-6 text-center py-8 border border-slate-200 bg-slate-50/80 rounded-2xl">
+            <div class="inline-flex items-center space-x-3 text-blue-600">
+              <svg class="animate-spin w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+              <span class="text-xs font-semibold tracking-wide text-slate-700">Memeriksa...</span>
+            </div>
+          </div>
+
+          <!-- Result Area -->
+          <div id="result" class="hidden mt-6 rounded-2xl p-6 border transition-all duration-500"></div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full border-t border-slate-200/80 bg-white/50 backdrop-blur-md py-6">
+    <div class="max-w-7xl mx-auto px-4 text-center text-slate-500 text-xs">
+      <p>&copy; 2026 PT. Laksana Digital Industri. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const API_URL = "https://script.google.com/macros/s/AKfycbxksoX0_Txoij8AUccE9O1voZ3l9wC5EE7T4AFiMAXRTijmgZgcW0GM_pVD9JiXc8GV4w/exec";
+
+    window.onload = function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const querySn = urlParams.get('sn');
+      if (querySn) {
+        document.getElementById('snInput').value = querySn;
+        verifikasiProduk();
+      }
+    };
+
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      verifikasiProduk();
+    }
+
+    async function verifikasiProduk() {
+      const input = document.getElementById("snInput").value.trim();
+      const resultDiv = document.getElementById("result");
+      const loadingDiv = document.getElementById("loading");
+
+      if (!input) {
+        alert("Tidak ada data!");
+        return;
+      }
+
+      loadingDiv.classList.remove("hidden");
+      resultDiv.classList.add("hidden");
+
+      try {
+        const response = await fetch(`${API_URL}?sn=${encodeURIComponent(input)}`, {
+          method: "GET",
+          redirect: "follow"
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const result = await response.json();
+
+        loadingDiv.classList.add("hidden");
+        resultDiv.classList.remove("hidden");
+
+        if (result.status === "found") {
+          const d = result.data;
+
+          resultDiv.className = "mt-6 border border-emerald-200 bg-emerald-50/60 rounded-2xl p-6 text-slate-800 shadow-sm";
+          resultDiv.innerHTML = `
+            <div class="flex items-center justify-between border-b border-emerald-200/80 pb-4 mb-4">
+              <div class="flex items-center space-x-2 text-emerald-700">
+                <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span class="text-xs font-bold uppercase tracking-wider">Data Ditemukan</span>
+              </div>
+              <span class="bg-emerald-100 text-emerald-800 border border-emerald-300 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                ${d.status}
+              </span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+              <div>
+                <span class="text-slate-500 text-[10px] uppercase font-semibold block">Identitas</span>
+                <span class="font-mono text-sm font-bold text-slate-900">${d.sn}</span>
+              </div>
+              <div>
+                <span class="text-slate-500 text-[10px] uppercase font-semibold block">Nama Pemilik</span>
+                <span class="text-slate-900 font-semibold text-sm">${d.pemilik}</span>
+              </div>
+              <div>
+                <span class="text-slate-500 text-[10px] uppercase font-semibold block">Nama Produk</span>
+                <span class="text-slate-800 font-medium">${d.produk}</span>
+              </div>
+              <div>
+                <span class="text-slate-500 text-[10px] uppercase font-semibold block">Keterangan</span>
+                <span class="text-slate-700 font-medium">${d.deskripsi}</span>
+              </div>
+            </div>
+          `;
+        } else {
+          resultDiv.className = "mt-6 border border-rose-200 bg-rose-50/60 rounded-2xl p-6 text-center text-slate-800 shadow-sm";
+          resultDiv.innerHTML = `
+            <div class="inline-flex p-3 bg-rose-100 rounded-2xl text-rose-600 mb-3 border border-rose-200">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </div>
+            <h3 class="text-rose-700 font-bold text-base mb-1">Data Tidak Ditemukan</h3>
+            <p class="text-xs text-slate-600 max-w-xs mx-auto">${result.message}</p>
+          `;
+        }
+
+      } catch (error) {
+        loadingDiv.classList.add("hidden");
+        console.error("Detail Error:", error);
+        alert("Gagal terhubung ke server verifikasi. Silakan periksa koneksi atau coba beberapa saat lagi.");
+      }
+    }
+  </script>
+</body>
+</html>
